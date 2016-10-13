@@ -1,0 +1,5 @@
+---
+applications:
+  - name: flask-sample
+    memory: 1G
+    instances: 1
