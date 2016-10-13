@@ -9,11 +9,12 @@ port = int(os.getenv("PORT"))
 
 @app.route('/')
 def hello_world():
+	# return 'Hello world'
     try:
-      self.leptonica = cdll.LoadLibrary(".heroku/vendor/lib/liblept.so.4.0.2")
+      leptonica = cdll.LoadLibrary(".heroku/vendor/lib/liblept.so.4.0.2")
       return 'Hello World! loaded liblept'
     except (OSError):
-      logger.info("ERROR LOADING leptlib: " + leptlib)
+      logger.info("ERROR LOADING leptlib: ")
       return 'Hello World! could not load liblept'
     
 
